@@ -10,8 +10,13 @@ function dfs(index, currentArray) {
  if (
 typeof currentArray[index] === "number" ||
 typeof currentArray[index] === "string"
-
- )
+){
+    flattened.push(currentArray[index]);
 }
+dfs(index + 1, currentArray);
+}
+dfs(0, arr);
+
+returned flattened;
 
 }
